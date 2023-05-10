@@ -1,7 +1,8 @@
 import "./App.css";
 import io from "socket.io-client";
-import { useState } from "react";
+import React, { useState } from 'react';
 import Chat from "./Chat";
+import Stats from './Stats';
 
 const socket = io.connect("http://localhost:3001");
 
@@ -22,6 +23,12 @@ function App() {
       {!showChat ? (
         <div className="joinChatContainer">
           <h1>Welcome</h1>
+
+
+          <div>
+            <h1>Stats downunder</h1>
+            <Stats />
+          </div>
 
           <p>Create A Username</p>
           <p>Join Any Room You Want!</p>
