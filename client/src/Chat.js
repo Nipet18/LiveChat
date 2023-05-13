@@ -2,7 +2,9 @@ import React, { useEffect, useState } from "react";
 import ScrollToBottom from "react-scroll-to-bottom";
 
 function Chat({ socket, username, room }) {
+
     const [currentMessage, setCurrentMessage] = useState("");
+
     const [messageList, setMessageList] = useState([]);
 
     const sendMessage = async () => {
@@ -70,7 +72,10 @@ function Chat({ socket, username, room }) {
                 />
                 <button onClick={sendMessage}>&#9658;</button>
             </div>
+
         </div>
+
+
     );
 }
 

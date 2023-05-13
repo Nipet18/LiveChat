@@ -1,8 +1,15 @@
+h3,
+h2,
+h1 {
+  color: white;
+}
+
 .App {
   min-width: 20vh;
   max-width: 40vh;
   height: 80%;
   background: #fff;
+  background-image: url(assets/eugene-golovesov-0djd3VLHK6c-unsplash.jpg);
   color: #212121;
   font-family: "Open Sans", sans-serif;
   display: grid;
@@ -71,7 +78,7 @@ body {
 .chat-window .chat-header {
   height: 45px;
   border-radius: 6px;
-  background: #43a047;
+  background: linear-gradient(#07e628, #025c1f);
   position: relative;
   cursor: pointer;
 }
@@ -189,19 +196,38 @@ body {
   cursor: pointer;
   flex: 15%;
   height: 100%;
-  background: transparent;
-  outline: none;
-  font-size: 25px;
-  color: rgb(144, 239, 169);
+  background: rgb(3, 121, 44);
+  font-size: 30px;
+  color: rgb(54, 255, 107);
+  border-color: #000000;
+  border: solid 2px;
+  border-radius: 5px;
 }
 
 .chat-window .chat-footer button:hover {
   color: #43a047;
-  padding-right: 10px;
-  transition: 0.5s;
+  padding-right: 5px;
+  transition: 0.2s;
 }
 
 
 .hide {
   opacity: 0 !important;
+}
+
+.userstats {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 300px;
+  min-height: 100px;
+  background: linear-gradient(#07e628, #025c1f);
+  border-radius: 5px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+  margin: 25px;
+  padding: 5px;
+  list-style-type: none;
 }
