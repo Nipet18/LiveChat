@@ -4,12 +4,16 @@ import React, { useState } from 'react';
 import Chat from "./Chat";
 import Stats from './Stats';
 
+//The URL were we a running socket.io
 const socket = io.connect("http://localhost:3001");
 
 function App() {
   const [username, setUsername] = useState("");
   const [room, setRoom] = useState("");
   const [showChat, setShowChat] = useState(false);
+
+
+  const [messageList, setMessageList] = useState([]);
 
   const joinRoom = () => {
     if (username !== "" && room !== "") {
@@ -20,6 +24,28 @@ function App() {
 
   return (
     <div className="App">
+
+      <div>
+        {messageList.map((messageContent) => {
+          return (
+            <div
+              className="message"
+              id={username === messageContent.author ? "you" : "other"}
+            >
+              <div>
+                <div className="message-content">
+                  <p>{messageContent.message}</p>
+                </div>
+                <div className="message-meta">
+                  <p id="time">{messageContent.time}</p>
+                  <p id="author">{messageContent.author}</p>
+                </div>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+
       {!showChat ? (
         <div className="joinChatContainer">
           <h1>Welcome</h1>

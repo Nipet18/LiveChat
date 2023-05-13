@@ -3,6 +3,8 @@ import React, { useState, useEffect } from 'react';
 function Stats() {
     const [data, setData] = useState([]);
 
+
+
     useEffect(() => {
         fetch('/Chat/data')
             .then(response => response.json())
