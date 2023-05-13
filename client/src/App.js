@@ -50,12 +50,6 @@ function App() {
         <div className="joinChatContainer">
           <h1>Welcome</h1>
 
-
-          <div>
-            <h1>Stats downunder</h1>
-            <Stats />
-          </div>
-
           <p>Create A Username</p>
           <p>Join Any Room You Want!</p>
           <input

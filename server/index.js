@@ -31,13 +31,8 @@ io.on("connection", (socket) => {
     socket.on("disconnect", () => {
         console.log("User Disconnected", socket.id);
     });
-
-    socket.on("Stats", (data) => {
-        socket.join(data);
-        console.log(`User with ID: ${socket.id} joined room: ${data}`);
-    });
 });
 
 server.listen(3001, () => {
-    console.log("SERVER RUNNING");
+    console.log("THE SERVER IS RUNNING");
 });
